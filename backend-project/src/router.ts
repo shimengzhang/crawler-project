@@ -9,6 +9,7 @@ const router = new Router()
 
 export default (app: Koa)=>{
   router.get('/', async (ctx, next)=>{
+    ctx.set("Access-Control-Allow-Origin", "*")
     ctx.body = 'hello'
   })
 
